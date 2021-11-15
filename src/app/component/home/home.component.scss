@@ -1,0 +1,47 @@
+.images-container {
+  margin-bottom: 4%;
+  margin-top: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__imageBox {
+    width: 100%;
+    line-height: 0;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 2px;
+    -moz-column-count: 4;
+    -moz-column-gap: 2px;
+    column-count: 4;
+    column-gap: 2px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  &__desc {
+    color: #fff;
+    position: relative;
+    left: 50%;
+    bottom: 25px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 88%;
+    i {
+      cursor: pointer;
+      margin: 20px;
+      font-size: 30px;
+      color: white;
+    }
+  }
+}
+
+.image-loader {
+  text-align: center;
+  img {
+    width: 2%;
+  }
+}
+
+.errorMessage {
+  text-align: center;
+}

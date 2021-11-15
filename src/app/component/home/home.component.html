@@ -1,0 +1,31 @@
+<div class="images-container" infiniteScroll (scrolled)="loadMore()">
+  <div class="images-container__imageBox" *ngFor="let images of imageBox">
+    <div *ngFor="let image of images">
+      <a>
+        <img
+          class="img-thumbnail"
+          class="img-fluid"
+          [src]="image.urls.small"
+          alt="Images"
+        />
+      </a>
+      <div class="images-container__desc">
+        <ng-template #popTemplate
+          ><div [innerHtml]="getData(image)"></div
+        ></ng-template>
+        <i
+          class="fa fa-user-circle float-left"
+          [popover]="popTemplate"
+          placement="right"
+        ></i>
+        <i class="fa fa-heart float-center" (click)="markAsFavorite(image)"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="image-loader" [hidden]="!loading">
+  <ngx-loading-bar></ngx-loading-bar>
+</div>
+
+<p class="errorMessage" [hidden]="!errorMessage">{{ errorMessage }}</p>

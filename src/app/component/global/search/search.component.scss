@@ -1,0 +1,15 @@
+.global-search .form-control {
+  padding-left: 2rem;
+}
+
+.global-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
